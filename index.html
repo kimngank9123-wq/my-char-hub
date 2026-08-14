@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HƯỚNG DƯƠNG</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- MÀN HÌNH CHÀO -->
+
+  <div class="welcome-screen">
+
+    <div class="welcome-content">
+
+      <h1>HƯỚNG DƯƠNG</h1>
+
+      <div class="welcome-box">
+
+        <p class="welcome-title">
+          Chào mừng
+        </p>
+
+        <p class="welcome-text">
+          Chào mừng bạn đến với thế giới nhỏ của Hướng Dương.
+        </p>
+
+        <button class="enter-button" onclick="enterWorld()">
+          ENTER
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- TRANG CHÍNH -->
+
+  <main id="main-page">
+
+    <header>
+      <h2>HƯỚNG DƯƠNG</h2>
+    </header>
+
+
+    <section class="characters">
+
+      <h3>My Characters</h3>
+
+      <div class="character-list">
+
+        <!-- Char sẽ được thêm vào đây sau -->
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <script>
+
+    function enterWorld() {
+
+      const welcome = document.querySelector(".welcome-screen");
+
+      welcome.classList.add("hide");
+
+    }
+
+  </script>
+
+</body>
+</html>
