@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HƯỚNG DƯƠNG</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MÀN HÌNH CHÀO
+    ========================== -->
+
+    <section class="welcome-screen" id="welcomeScreen">
+
+        <div class="welcome-content">
+
+            <h1 class="sunflower-title">
+                HƯỚNG DƯƠNG
+            </h1>
+
+            <div class="welcome-box">
+
+                <div class="decorative-line">
+                    <span></span>
+                    <i>✦</i>
+                    <span></span>
+                </div>
+
+                <h2>Chào mừng</h2>
+
+                <p>
+                    Chào mừng bạn đến với
+                    thế giới nhỏ của Hướng Dương.
+                </p>
+
+                <button
+                    class="enter-button"
+                    id="enterButton"
+                    type="button"
+                >
+                    ENTER
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         TRANG CHÍNH
+    ========================== -->
+
+    <main class="main-page" id="mainPage">
+
+        <h2 class="main-title">
+            HƯỚNG DƯƠNG
+        </h2>
+
+        <section class="characters">
+
+            <h3>My Characters</h3>
+
+            <div class="character-list">
+                <!-- Char sẽ thêm sau -->
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        const enterButton =
+            document.getElementById("enterButton");
+
+        const welcomeScreen =
+            document.getElementById("welcomeScreen");
+
+        const mainPage =
+            document.getElementById("mainPage");
+
+
+        enterButton.addEventListener("click", function () {
+
+            enterButton.disabled = true;
+
+            welcomeScreen.classList.add("leaving");
+
+            setTimeout(function () {
+
+                mainPage.classList.add("visible");
+
+            }, 700);
+
+
+            setTimeout(function () {
+
+                welcomeScreen.classList.add("gone");
+
+            }, 1300);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
