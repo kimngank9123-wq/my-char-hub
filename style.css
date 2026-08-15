@@ -1,629 +1,1187 @@
+/* =====================================================
+   FONT
+===================================================== */
+
 @import url(
-  'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap'
+    'https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap'
 );
 
 
-/* ==============================
+
+/* =====================================================
    RESET
-================================ */
+===================================================== */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
 }
+
+
 
 html,
 body {
-  width: 100%;
-  min-height: 100%;
+
+    width: 100%;
+
+    min-height: 100%;
+
 }
+
+
 
 body {
-  min-height: 100vh;
-  overflow: hidden;
 
-  font-family:
-    "Cormorant Garamond",
-    Georgia,
-    serif;
+    min-height: 100vh;
 
-  color: #fff8e5;
+    overflow: hidden;
 
-  /* 🌻 ẢNH NỀN TRỰC TIẾP */
-  background-image:
-    linear-gradient(
-      rgba(55, 40, 15, 0.20),
-      rgba(45, 32, 10, 0.20)
-    ),
-    url("./IMG_0736.jpeg");
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
 
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+    color: #fff8e5;
+
+
+    /* =============================================
+       🌻 ẢNH NỀN
+       File thực tế: IMG_0736.jpeg
+    ============================================== */
+
+    background-image:
+
+        linear-gradient(
+            rgba(48, 36, 15, 0.20),
+            rgba(65, 48, 17, 0.10),
+            rgba(42, 29, 9, 0.22)
+        ),
+
+        url("./IMG_0736.jpeg");
+
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
 }
 
 
-/* ==============================
+
+/* =====================================================
    MÀN HÌNH CHÀO
-================================ */
+===================================================== */
 
 .welcome-screen {
-  position: fixed;
-  inset: 0;
 
-  z-index: 20;
+    position: fixed;
 
-  width: 100%;
-  height: 100vh;
-  height: 100svh;
+    inset: 0;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    z-index: 20;
 
-  padding: 24px;
+    width: 100%;
 
-  opacity: 1;
-  visibility: visible;
+    height: 100vh;
 
-  transition:
-    opacity 0.8s ease,
-    visibility 0.8s ease;
+    height: 100svh;
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    padding: 22px;
+
+
+    opacity: 1;
+
+    visibility: visible;
+
+
+    transition:
+
+        opacity 0.8s ease,
+
+        visibility 0.8s ease;
+
 }
+
+
 
 .welcome-screen.leaving {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
 }
+
+
 
 .welcome-screen.gone {
-  display: none;
+
+    display: none;
+
 }
 
 
-/* ==============================
-   NỘI DUNG CHÀO
-================================ */
+
+/* =====================================================
+   NỘI DUNG INTRO
+===================================================== */
 
 .welcome-content {
-  width: 100%;
-  max-width: 620px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
 
-  text-align: center;
+    max-width: 620px;
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    text-align: center;
+
 }
 
 
-/* ==============================
+
+/* =====================================================
    🌻 HƯỚNG DƯƠNG
-================================ */
+   NẰM NGOÀI KHUNG
+===================================================== */
 
 .sunflower-title {
-  margin-bottom: 24px;
 
-  font-family:
-    "Playfair Display",
-    Georgia,
-    serif;
+    margin-bottom: 23px;
 
-  font-size:
-    clamp(38px, 10vw, 70px);
 
-  font-weight: 500;
+    font-family:
 
-  line-height: 1.1;
+        "Playfair Display",
 
-  letter-spacing: 0.15em;
+        Georgia,
 
-  color: #fff9e6;
+        serif;
 
-  text-shadow:
-    0 2px 5px rgba(40, 26, 7, 0.65),
-    0 5px 18px rgba(40, 25, 5, 0.30);
 
-  white-space: nowrap;
+    font-size:
 
-  animation:
-    titleEnter
-    1.3s
-    cubic-bezier(.22,.61,.36,1)
-    both;
+        clamp(
+            38px,
+            10vw,
+            68px
+        );
+
+
+    font-weight: 500;
+
+
+    line-height: 1.1;
+
+
+    letter-spacing: 0.13em;
+
+
+    color: #fff9e8;
+
+
+    text-shadow:
+
+        0 2px 5px
+        rgba(35, 24, 7, 0.65),
+
+        0 7px 20px
+        rgba(30, 20, 5, 0.30);
+
+
+    white-space: nowrap;
+
+
+    animation:
+
+        titleEnter
+
+        1.35s
+
+        cubic-bezier(.22,.61,.36,1)
+
+        both;
+
 }
 
 
-/* ==============================
-   KHUNG TRONG SUỐT
-================================ */
+
+/* =====================================================
+   🖼️ KHUNG
+===================================================== */
 
 .welcome-box {
-  position: relative;
 
-  width: min(88vw, 510px);
+    position: relative;
 
-  padding: 30px 28px 32px;
 
-  background:
-    rgba(45, 35, 15, 0.16);
+    width:
 
-  border:
-    1px solid
-    rgba(255, 248, 220, 0.68);
+        min(
+            89vw,
+            520px
+        );
 
-  box-shadow:
-    0 12px 35px
-    rgba(30, 20, 5, 0.20);
 
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+    padding:
 
-  animation:
-    boxEnter
-    1.2s
-    0.15s
-    cubic-bezier(.22,.61,.36,1)
-    both;
+        31px
+        27px
+        33px;
+
+
+    /* Trong suốt */
+
+    background:
+
+        rgba(
+            48,
+            36,
+            14,
+            0.13
+        );
+
+
+    border:
+
+        1px solid
+
+        rgba(
+            255,
+            249,
+            225,
+            0.65
+        );
+
+
+    backdrop-filter:
+
+        blur(2px);
+
+    -webkit-backdrop-filter:
+
+        blur(2px);
+
+
+    box-shadow:
+
+        0 15px 40px
+
+        rgba(
+            25,
+            18,
+            5,
+            0.20
+        );
+
+
+    animation:
+
+        boxEnter
+
+        1.15s
+
+        0.18s
+
+        cubic-bezier(.22,.61,.36,1)
+
+        both;
+
 }
 
 
-/* ==============================
+
+/* =====================================================
    GÓC KHUNG
-================================ */
+===================================================== */
 
 .welcome-box::before,
 .welcome-box::after {
-  content: "";
 
-  position: absolute;
+    content: "";
 
-  width: 22px;
-  height: 22px;
+    position: absolute;
 
-  border:
-    1px solid
-    rgba(255, 248, 220, 0.85);
+
+    width: 23px;
+
+    height: 23px;
+
+
+    border:
+
+        1px solid
+
+        rgba(
+            255,
+            249,
+            225,
+            0.82
+        );
+
 }
+
+
 
 .welcome-box::before {
-  top: -1px;
-  left: -1px;
 
-  border-right: none;
-  border-bottom: none;
+    top: -1px;
+
+    left: -1px;
+
+
+    border-right: none;
+
+    border-bottom: none;
+
 }
+
+
 
 .welcome-box::after {
-  right: -1px;
-  bottom: -1px;
 
-  border-left: none;
-  border-top: none;
+    right: -1px;
+
+    bottom: -1px;
+
+
+    border-left: none;
+
+    border-top: none;
+
 }
 
 
-/* ==============================
+
+/* =====================================================
    TRANG TRÍ
-================================ */
+===================================================== */
 
 .decorative-line {
-  width: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100%;
 
-  gap: 10px;
 
-  margin-bottom: 16px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    gap: 11px;
+
+
+    margin-bottom: 18px;
+
 }
+
+
 
 .decorative-line span {
-  width: 38px;
-  height: 1px;
 
-  background:
-    rgba(255, 248, 218, 0.60);
+    display: block;
+
+
+    width: 40px;
+
+    height: 1px;
+
+
+    background:
+
+        rgba(
+            255,
+            249,
+            225,
+            0.55
+        );
+
 }
+
+
 
 .decorative-line i {
-  font-style: normal;
 
-  font-size: 12px;
+    font-style: normal;
 
-  color:
-    rgba(255, 248, 218, 0.95);
+
+    font-size: 12px;
+
+
+    color:
+
+        rgba(
+            255,
+            249,
+            225,
+            0.90
+        );
+
 }
 
 
-/* ==============================
-   CHÀO MỪNG
-================================ */
+
+/* =====================================================
+   ✦ TIÊU ĐỀ LỜI CHÀO
+===================================================== */
 
 .welcome-box h2 {
-  margin-bottom: 12px;
 
-  font-family:
-    "Playfair Display",
-    Georgia,
-    serif;
+    margin-bottom: 17px;
 
-  font-size:
-    clamp(26px, 7vw, 38px);
 
-  font-weight: 500;
+    font-family:
 
-  line-height: 1.2;
+        "Libre Baskerville",
 
-  letter-spacing: 0.07em;
+        Georgia,
 
-  color: #fff8df;
+        serif;
 
-  text-shadow:
-    0 2px 5px rgba(40, 26, 6, 0.55);
+
+    font-size:
+
+        clamp(
+            21px,
+            5.8vw,
+            31px
+        );
+
+
+    font-weight: 400;
+
+
+    line-height: 1.55;
+
+
+    letter-spacing: 0.015em;
+
+
+    color: #fff9e9;
+
+
+    text-shadow:
+
+        0 2px 5px
+
+        rgba(
+            35,
+            23,
+            5,
+            0.55
+        );
+
 }
 
 
-/* ==============================
-   LỜI CHÀO
-================================ */
+
+/* =====================================================
+   LỜI GIỚI THIỆU
+===================================================== */
 
 .welcome-box p {
-  max-width: 400px;
 
-  margin:
-    0 auto 24px;
+    max-width: 405px;
 
-  font-size:
-    clamp(17px, 4.5vw, 21px);
 
-  line-height: 1.65;
+    margin:
 
-  letter-spacing: 0.025em;
+        0 auto
 
-  color:
-    rgba(255, 252, 236, 0.96);
+        25px;
 
-  text-shadow:
-    0 1px 4px
-    rgba(35, 22, 4, 0.55);
+
+    font-family:
+
+        "Libre Baskerville",
+
+        Georgia,
+
+        serif;
+
+
+    font-size:
+
+        clamp(
+            14px,
+            3.8vw,
+            17px
+        );
+
+
+    font-weight: 400;
+
+
+    line-height: 1.85;
+
+
+    letter-spacing: 0.005em;
+
+
+    color:
+
+        rgba(
+            255,
+            252,
+            238,
+            0.94
+        );
+
+
+    text-shadow:
+
+        0 1px 4px
+
+        rgba(
+            30,
+            20,
+            5,
+            0.50
+        );
+
 }
 
 
-/* ==============================
+
+/* =====================================================
    ENTER
-================================ */
+===================================================== */
 
 .enter-button {
-  min-width: 112px;
 
-  padding: 10px 27px;
+    appearance: none;
 
-  border:
-    1px solid
-    rgba(255, 248, 218, 0.75);
 
-  outline: none;
+    min-width: 115px;
 
-  background:
-    rgba(55, 40, 12, 0.18);
 
-  color: #fff8df;
+    padding:
 
-  font-family:
-    "Cormorant Garamond",
-    Georgia,
-    serif;
+        10px
+        27px;
 
-  font-size: 16px;
 
-  font-weight: 500;
+    border:
 
-  letter-spacing: 0.20em;
+        1px solid
 
-  cursor: pointer;
+        rgba(
+            255,
+            249,
+            225,
+            0.72
+        );
 
-  transition:
-    background 0.3s ease,
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
+
+    outline: none;
+
+
+    background:
+
+        rgba(
+            55,
+            40,
+            12,
+            0.14
+        );
+
+
+    color: #fff9e7;
+
+
+    font-family:
+
+        "Libre Baskerville",
+
+        Georgia,
+
+        serif;
+
+
+    font-size: 13px;
+
+
+    font-weight: 400;
+
+
+    letter-spacing: 0.20em;
+
+
+    cursor: pointer;
+
+
+    transition:
+
+        background 0.3s ease,
+
+        box-shadow 0.3s ease,
+
+        transform 0.3s ease;
+
 }
+
+
 
 .enter-button:hover {
-  background:
-    rgba(255, 248, 214, 0.16);
 
-  box-shadow:
-    0 0 18px
-    rgba(255, 244, 185, 0.20);
+    background:
 
-  transform:
-    translateY(-2px);
+        rgba(
+            255,
+            249,
+            220,
+            0.14
+        );
+
+
+    box-shadow:
+
+        0 0 20px
+
+        rgba(
+            255,
+            243,
+            190,
+            0.20
+        );
+
+
+    transform:
+
+        translateY(-2px);
+
 }
+
+
 
 .enter-button:active {
-  transform:
-    translateY(0);
+
+    transform:
+
+        translateY(0);
+
 }
 
 
-/* ==============================
+
+/* =====================================================
    TRANG CHÍNH
-================================ */
+===================================================== */
 
 .main-page {
-  position: relative;
 
-  width: 100%;
+    position: relative;
 
-  min-height: 100vh;
-  min-height: 100svh;
 
-  padding: 45px 20px;
+    width: 100%;
 
-  overflow-y: auto;
 
-  opacity: 0;
-  visibility: hidden;
+    min-height: 100vh;
 
-  transform:
-    translateY(20px);
+    min-height: 100svh;
 
-  transition:
-    opacity 0.9s ease,
-    transform 0.9s ease,
-    visibility 0s linear 0.9s;
+
+    padding:
+
+        45px
+        20px;
+
+
+    overflow-y: auto;
+
+
+    opacity: 0;
+
+    visibility: hidden;
+
+
+    transform:
+
+        translateY(20px);
+
+
+    transition:
+
+        opacity 0.9s ease,
+
+        transform 0.9s ease,
+
+        visibility 0s linear 0.9s;
+
 }
+
+
 
 .main-page.visible {
-  opacity: 1;
-  visibility: visible;
 
-  transform:
-    translateY(0);
+    opacity: 1;
 
-  transition:
-    opacity 0.9s ease,
-    transform 0.9s ease;
+    visibility: visible;
+
+
+    transform:
+
+        translateY(0);
+
+
+    transition:
+
+        opacity 0.9s ease,
+
+        transform 0.9s ease;
+
 }
 
 
-/* ==============================
-   TITLE TRANG CHÍNH
-================================ */
+
+/* =====================================================
+   TIÊU ĐỀ TRANG CHÍNH
+===================================================== */
 
 .main-title {
-  margin-bottom: 38px;
 
-  text-align: center;
+    margin-bottom: 38px;
 
-  font-family:
-    "Playfair Display",
-    Georgia,
-    serif;
 
-  font-size:
-    clamp(34px, 9vw, 54px);
+    text-align: center;
 
-  font-weight: 500;
 
-  letter-spacing: 0.13em;
+    font-family:
 
-  color: #fff9e6;
+        "Playfair Display",
 
-  text-shadow:
-    0 3px 8px
-    rgba(38, 25, 5, 0.55);
+        Georgia,
+
+        serif;
+
+
+    font-size:
+
+        clamp(
+            34px,
+            9vw,
+            54px
+        );
+
+
+    font-weight: 500;
+
+
+    letter-spacing: 0.12em;
+
+
+    color: #fff9e7;
+
+
+    text-shadow:
+
+        0 3px 9px
+
+        rgba(
+            35,
+            23,
+            5,
+            0.55
+        );
+
 }
 
 
-/* ==============================
+
+/* =====================================================
    CHARACTERS
-================================ */
+===================================================== */
 
 .characters {
-  width:
-    min(92vw, 900px);
 
-  margin: 0 auto;
+    width:
 
-  padding:
-    28px 22px;
+        min(
+            92vw,
+            900px
+        );
 
-  text-align: center;
 
-  background:
-    rgba(55, 42, 17, 0.12);
+    margin:
 
-  border:
-    1px solid
-    rgba(255, 248, 220, 0.45);
+        0 auto;
 
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+
+    padding:
+
+        28px
+        22px;
+
+
+    text-align: center;
+
+
+    background:
+
+        rgba(
+            50,
+            38,
+            15,
+            0.11
+        );
+
+
+    border:
+
+        1px solid
+
+        rgba(
+            255,
+            249,
+            225,
+            0.43
+        );
+
+
+    backdrop-filter:
+
+        blur(2px);
+
+    -webkit-backdrop-filter:
+
+        blur(2px);
+
 }
+
+
 
 .characters h3 {
-  font-family:
-    "Playfair Display",
-    Georgia,
-    serif;
 
-  font-size: 25px;
+    font-family:
 
-  font-weight: 500;
+        "Playfair Display",
 
-  letter-spacing: 0.08em;
+        Georgia,
+
+        serif;
+
+
+    font-size: 25px;
+
+
+    font-weight: 500;
+
+
+    letter-spacing: 0.08em;
+
+
+    color: #fff9e8;
+
 }
 
 
-/* ==============================
-   ANIMATION
-================================ */
+
+/* =====================================================
+   🌻 ANIMATION TIÊU ĐỀ
+   CHẠY MỘT LẦN
+===================================================== */
 
 @keyframes titleEnter {
 
-  0% {
-    opacity: 0;
+    0% {
 
-    transform:
-      translateY(28px);
+        opacity: 0;
 
-    filter:
-      blur(7px);
-  }
 
-  55% {
-    opacity: 1;
+        transform:
 
-    filter:
-      blur(0);
-  }
+            translateY(28px);
 
-  100% {
-    opacity: 1;
 
-    transform:
-      translateY(0);
+        filter:
 
-    filter:
-      blur(0);
-  }
+            blur(7px);
+
+    }
+
+
+    55% {
+
+        opacity: 1;
+
+
+        filter:
+
+            blur(0);
+
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+
+        transform:
+
+            translateY(0);
+
+
+        filter:
+
+            blur(0);
+
+    }
+
 }
 
+
+
+/* =====================================================
+   ANIMATION KHUNG
+===================================================== */
 
 @keyframes boxEnter {
 
-  0% {
-    opacity: 0;
+    0% {
 
-    transform:
-      translateY(20px);
+        opacity: 0;
 
-    filter:
-      blur(4px);
-  }
 
-  100% {
-    opacity: 1;
+        transform:
 
-    transform:
-      translateY(0);
+            translateY(20px);
 
-    filter:
-      blur(0);
-  }
+
+        filter:
+
+            blur(4px);
+
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+
+        transform:
+
+            translateY(0);
+
+
+        filter:
+
+            blur(0);
+
+    }
+
 }
 
 
-/* ==============================
+
+/* =====================================================
    📱 MOBILE
-================================ */
+===================================================== */
 
 @media (max-width: 600px) {
 
-  .welcome-screen {
-    padding: 18px;
-  }
 
-  .sunflower-title {
-    font-size:
-      clamp(
-        30px,
-        9.2vw,
-        46px
-      );
+    .welcome-screen {
 
-    letter-spacing:
-      0.105em;
+        padding: 17px;
 
-    margin-bottom: 20px;
-  }
+    }
 
-  .welcome-box {
-    width: 90vw;
 
-    padding:
-      27px
-      19px
-      29px;
-  }
+    .sunflower-title {
 
-  .welcome-box h2 {
-    font-size: 26px;
-  }
+        font-size:
 
-  .welcome-box p {
-    font-size: 17px;
+            clamp(
+                29px,
+                9vw,
+                45px
+            );
 
-    line-height: 1.6;
 
-    margin-bottom: 22px;
-  }
+        letter-spacing:
 
-  .enter-button {
-    min-width: 105px;
+            0.095em;
 
-    padding:
-      9px
-      24px;
 
-    font-size: 15px;
-  }
+        margin-bottom:
 
-  .main-page {
-    padding:
-      35px
-      16px;
-  }
+            19px;
 
-  .main-title {
-    font-size: 32px;
+    }
 
-    letter-spacing:
-      0.10em;
-  }
 
-  .characters {
-    width: 92vw;
+    .welcome-box {
 
-    padding:
-      25px
-      17px;
-  }
+        width: 91vw;
+
+
+        padding:
+
+            26px
+            18px
+            28px;
+
+    }
+
+
+    .welcome-box h2 {
+
+        font-size: 21px;
+
+
+        line-height: 1.55;
+
+
+        margin-bottom: 14px;
+
+    }
+
+
+    .welcome-box p {
+
+        font-size: 14px;
+
+
+        line-height: 1.8;
+
+
+        margin-bottom: 22px;
+
+    }
+
+
+    .decorative-line {
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .enter-button {
+
+        min-width: 105px;
+
+
+        padding:
+
+            9px
+            23px;
+
+
+        font-size: 12px;
+
+    }
+
+
+    .main-page {
+
+        padding:
+
+            35px
+            16px;
+
+    }
+
+
+    .main-title {
+
+        font-size: 31px;
+
+
+        letter-spacing:
+
+            0.09em;
+
+    }
+
+
+    .characters {
+
+        width: 92vw;
+
+
+        padding:
+
+            25px
+            17px;
+
+    }
+
 }
 
 
-/* ==============================
-   📱 MÀN HÌNH RẤT NHỎ
-================================ */
+
+/* =====================================================
+   📱 ĐIỆN THOẠI RẤT NHỎ
+===================================================== */
 
 @media (max-width: 380px) {
 
-  .sunflower-title {
-    font-size: 28px;
 
-    letter-spacing:
-      0.09em;
-  }
+    .sunflower-title {
 
-  .welcome-box {
-    padding:
-      24px
-      16px
-      26px;
-  }
+        font-size: 27px;
 
-  .welcome-box h2 {
-    font-size: 24px;
-  }
 
-  .welcome-box p {
-    font-size: 16px;
-  }
+        letter-spacing:
+
+            0.075em;
+
+    }
+
+
+    .welcome-box {
+
+        padding:
+
+            22px
+            15px
+            25px;
+
+    }
+
+
+    .welcome-box h2 {
+
+        font-size: 19px;
+
+    }
+
+
+    .welcome-box p {
+
+        font-size: 13px;
+
+    }
+
 }
