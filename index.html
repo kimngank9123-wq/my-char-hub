@@ -2,7 +2,9 @@
 <html lang="vi">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
@@ -10,37 +12,73 @@
 
     <title>HƯỚNG DƯƠNG</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- =========================
-         MÀN HÌNH CHÀO
-    ========================== -->
 
-    <section class="welcome-screen" id="welcomeScreen">
+    <!-- =========================================
+         MÀN HÌNH CHÀO
+    ========================================== -->
+
+    <section
+        class="welcome-screen"
+        id="welcomeScreen"
+    >
 
         <div class="welcome-content">
+
+
+            <!-- TÊN HƯỚNG DƯƠNG
+                 NẰM NGOÀI KHUNG -->
 
             <h1 class="sunflower-title">
                 HƯỚNG DƯƠNG
             </h1>
 
+
+            <!-- KHUNG LỜI CHÀO -->
+
             <div class="welcome-box">
 
+
+                <!-- TRANG TRÍ -->
+
                 <div class="decorative-line">
+
                     <span></span>
+
                     <i>✦</i>
+
                     <span></span>
+
                 </div>
 
-                <h2>Chào mừng</h2>
+
+                <!-- TIÊU ĐỀ -->
+
+                <h2>
+                    Một góc nhỏ,
+                    dành riêng cho những câu chuyện.
+                </h2>
+
+
+                <!-- LỜI GIỚI THIỆU -->
 
                 <p>
-                    Chào mừng bạn đến với
-                    thế giới nhỏ của Hướng Dương.
+                    Nơi đây lưu giữ những nhân vật,
+                    những câu chuyện và những điều
+                    thuộc về Hướng Dương.
                 </p>
+
+
+                <!-- NÚT ENTER -->
 
                 <button
                     class="enter-button"
@@ -50,6 +88,7 @@
                     ENTER
                 </button>
 
+
             </div>
 
         </div>
@@ -57,63 +96,128 @@
     </section>
 
 
-    <!-- =========================
-         TRANG CHÍNH
-    ========================== -->
 
-    <main class="main-page" id="mainPage">
+    <!-- =========================================
+         TRANG CHÍNH
+    ========================================== -->
+
+    <main
+        class="main-page"
+        id="mainPage"
+    >
+
 
         <h2 class="main-title">
             HƯỚNG DƯƠNG
         </h2>
 
+
         <section class="characters">
 
-            <h3>My Characters</h3>
+
+            <h3>
+                My Characters
+            </h3>
+
 
             <div class="character-list">
-                <!-- Char sẽ thêm sau -->
+
+                <!--
+                    Char sẽ thêm sau:
+                    Ảnh
+                    Thông tin
+                    Dokichat
+                    GGAI
+                -->
+
             </div>
 
+
         </section>
+
 
     </main>
 
 
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
     <script>
 
         const enterButton =
-            document.getElementById("enterButton");
+            document.getElementById(
+                "enterButton"
+            );
 
         const welcomeScreen =
-            document.getElementById("welcomeScreen");
+            document.getElementById(
+                "welcomeScreen"
+            );
 
         const mainPage =
-            document.getElementById("mainPage");
+            document.getElementById(
+                "mainPage"
+            );
 
 
-        enterButton.addEventListener("click", function () {
-
-            enterButton.disabled = true;
-
-            welcomeScreen.classList.add("leaving");
-
-            setTimeout(function () {
-
-                mainPage.classList.add("visible");
-
-            }, 700);
+        enterButton.addEventListener(
+            "click",
+            function () {
 
 
-            setTimeout(function () {
+                /* Không cho bấm nhiều lần */
 
-                welcomeScreen.classList.add("gone");
+                enterButton.disabled = true;
 
-            }, 1300);
 
-        });
+                /* Intro biến mất */
+
+                welcomeScreen.classList.add(
+                    "leaving"
+                );
+
+
+                /*
+                    Đợi intro gần biến mất
+                    rồi mới hiện trang chính
+                */
+
+                setTimeout(
+                    function () {
+
+                        mainPage.classList.add(
+                            "visible"
+                        );
+
+                    },
+                    650
+                );
+
+
+                /*
+                    Xóa intro hoàn toàn
+                    sau khi animation kết thúc
+                */
+
+                setTimeout(
+                    function () {
+
+                        welcomeScreen.classList.add(
+                            "gone"
+                        );
+
+                    },
+                    1300
+                );
+
+            }
+
+        );
 
     </script>
+
 
 </body>
 
